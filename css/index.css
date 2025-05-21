@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-color: black;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.brand img {
+    left: 8px;
+    top: 0px;
+    height: 125px;
+    width: 125px;
+    background: no-repeat;
+    text-indent: -999em;
+    text-decoration: none;
+    display: flex;
+    
+}
+
+.background{
+    opacity: 90%; 
+    min-height:500px;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.center{
+    position: absolute;
+    bottom: 37%;
+    left: 22%;
+    transform: translate(0%,-10%);
+    color: white;
+    font-size: 6vw;
+    word-spacing: 15px;
+    letter-spacing: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    margin: 5px;
+}
+
+.tag-line hr {
+    display: block;
+    margin-right: 30px;
+}
+
+.tag-line {
+    bottom: 10%;
+    left: 35%;
+    transform: translate(0%,-190%);
+    color: whitesmoke;
+    font-family:monospace;
+    font-size: 1.5vw;
+    padding: 5px;
+}
+
+.About {
+    color: whitesmoke;
+    background-color: transparent;
+    display: flex;
+    padding: 10px;
+    transform: translateY(3%);
+}
+
+.About img {
+    opacity: 90%;
+}
+
+.About h2 {
+    position: absolute;
+    font-size: 4vw;
+    flex-direction: column;
+    font-family: 'Times New Roman', Times, serif;
+    transform: translate(2vw,-15px);
+}
+
+.About #p1 {
+    position: absolute;
+    font-size: 1.5vw;
+    font-family: monospace;
+    transform: translate(0%,8vh);
+    padding: 30px;
+}
+
+.About #p2 {
+    position: absolute;
+    font-size: 1.5vw;
+    font-family: monospace;
+    transform: translate(0%,25vh);
+    padding: 30px;
+}
+
+.Subsystem {
+    color: whitesmoke;
+    background-color: transparent;
+    display: flex;
+    padding: 10px;
+}
+
+
+.Subsystem img {
+    opacity: 90%;
+}
+
+.Subsystem h2 {
+    position: absolute;
+    font-size: 4vw;
+    font-family: 'Times New Roman', Times, serif;
+    transform: translate(130%,15%);
+}
+
+.Subsystem2 {
+    color: whitesmoke;
+    transform: translate(8%,-230%);
+}
+
+.card_container {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    align-items: center;
+    perspective: 1000px;
+    width: 100%;
+    height: 250px;
+}
+
+
+.card {
+    width:362.472px;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.card_front,
+.card_back {
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.card_front {
+    z-index: 2;
+}
+
+.card_front img {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+}
+
+.card_back {
+    color: whitesmoke;
+    background-color: transparent;
+    transform: rotateY(180deg);/* to hide the backface*/
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.card_back .card_header {
+    font-family: 'Times New Roman', Times, serif;
+    transform: translateX(-10%);
+}
+
+.card_back .card_body {
+    font-family: monospace;
+    padding: 20px;
+}
+
+.card:hover .card_front {
+    animation: Scaledownfront 1s forwards;
+}
+
+.card:hover .card_back {
+    animation: Scaleupback 2s forwards;
+}
+
+#row1 {
+    transform: translateY(600px);
+}
+
+#row2 {
+    transform: translateY(800px);
+}
+@keyframes Scaledownfront {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes Scaleupback {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Sponsors {
+    color: whitesmoke;
+    width: 100%;
+    height: 700px;
+}
+
+.Sponsors h2 {
+    position: absolute;
+    font-size: 4vw;
+    font-family: 'Times New Roman', Times, serif;
+    transform: translate(160%,-600px);
+}
+
+.sponsor {
+    gap: 5%;
+    transform: translate(11%,-500px);
+}
+
+.sponsor1 img {
+    width: 250px;
+    height: 250px;
+    transform: translate(-40%,130%);
+}
+.sponsor2 img {
+    width: 650px;
+    height: 250px;
+    transform: translate(35%,-100%);
+}
+.sponsor3 img {
+    width: 250px;
+    height: 250px;
+    transform: translate(380%,-80%);
+}

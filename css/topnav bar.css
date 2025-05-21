@@ -1,0 +1,39 @@
+.topnav {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    background-color: transparent; /*black*/
+    overflow: hidden;
+    margin-left: 42vw;
+    margin-top: 20px;
+}
+
+.topnav a {
+    float: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 31px;
+    color: #818181;
+    display: block;
+    text-align: end;
+}
+
+.topnav a:hover {
+    color: #f1f1f1;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+
+@media screen and (max-height: 450px) {
+    .topnav {padding-top: 15px;}
+    .topnav a {font-size: 18px;}
+    
+}

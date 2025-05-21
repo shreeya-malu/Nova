@@ -1,0 +1,254 @@
+:root {
+    --primary:#537895;
+    --secondary:#09203f;
+    --dark: #212121;
+    --light: #f3f3f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    overflow-y: visible;
+    background-color: black;
+    
+}
+
+.bg-img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /*opacity: 70%;*/
+    overflow-y: visible;
+}
+
+.brand img {
+    position: absolute;
+    opacity: 70%;
+    left: 8px;
+    top: 0px;
+    height: 110px;
+    width: 110px;
+    background: no-repeat;
+    text-indent: -999em;
+    text-decoration: none;
+    display: flex;
+    
+}
+
+.text {
+    position: absolute;
+    color: white;
+    transform: translate(-75%,95%);
+    top: 9%;
+    left: 20%;
+    font-size: 2.3vw;
+    z-index: 2;
+}
+
+.card-container {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+    transform: translate(-0%,-30%);
+    z-index: 2;
+    
+}
+
+.card {
+    width: 362.472px;
+    height: 325px;
+    perspective: 1000px;
+}
+
+.card_face {
+    backface-visibility: hidden; /* Ensures back face is not visible */
+}
+
+
+.inner_card {
+    width: 362.472px;
+    height: 325px;
+    transition: transform 1s;
+    transform-style: preserve-3d; /* allows moving around in 3d space*/
+    cursor: pointer;
+    position:absolute;
+}
+
+.inner_card:hover {
+    transform: rotateY(180deg); /*js will use this function from the class: inner_face to basically rotate the card so as to have a visualization of flipping*/ 
+}
+
+.card_face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; /* hides the backface after flipping*/
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 3px 18px 3px rgba(0,0,0,0.2);
+}
+
+.inner_card_front,
+.inner_card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.inner_card_front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    background-image: linear-gradient(to bottom right,var(--primary),var(--secondary));
+}
+
+.inner_card_front h1 {
+    position: relative;
+    font-family: monospace;
+    font-size: 30px;
+    text-align:center;
+    letter-spacing: 0.3px;
+}
+
+.inner_card_back {
+    background-color: var(--light);
+    transform: rotateY(180deg);/*hidden initially*/
+    background-image: linear-gradient(to bottom left,var(--primary)10%,var(--secondary)115%);
+}
+
+.card_content {
+    width: 100%;
+    /*height: 100%;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card_header {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+
+.card_header::after {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    bottom: 0;
+    z-index: -1;
+   /*border-radius: 5px;*/
+}
+
+.inner_card_front img {
+    display: block;
+    width: 240px;
+    height: 200px;
+    margin: auto auto;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    box-shadow: 0px 3px 18px 3px rgba(0,0,0,0.2);
+}
+
+.card_header h2 {
+    color: #f3f3f3;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase; /*will put all the letters in uppercase*/
+    word-spacing: 5px;
+
+}
+
+.card_body p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    padding: 10px;
+}
+
+.card_body h3 {
+    padding: 10px;
+}
+
+.inner_card_back .card_footer {
+    position: fixed;
+    text-align: center;
+    padding: 10px;
+    top: 80%;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inner_card_front .card_footer {
+    text-align: center;
+    padding: 0px;
+    position: relative;
+    margin-top: 15px;
+    font-family: monospace;
+    letter-spacing: 0.8px;
+    font-size: 20px;
+}
+
+#card2 .inner_card_back .card_body p {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+
+#row1 {
+    position: absolute;
+    transform: translateX(15.8%) translateY(-20%);
+    gap: 15%;
+}
+
+#row2 {
+    position: absolute;
+    transform: translateX(-20%) translateY(85%);
+    gap: 38.5%;
+}
+
+#row3 {
+    position: absolute;
+    transform: translateX(-5%) translateY(95%);
+}
+
+#row4 {
+    position: absolute;
+    transform: translateX(10%) translateY(245%);
+}
+
+#row3 #card2 .inner_card_front h1 {
+    letter-spacing: 0px;
+    word-spacing: 0.3px;
+    font-size: 23px;
+}
+
+#row3 #card3 .inner_card_front h1 {
+    letter-spacing: 0px;
+    word-spacing: 0.3px;
+    font-size: 23px;
+}
+
+#row1 #card1 .inner_card_back .card_footer {
+    transform: translateY(11px);
+}

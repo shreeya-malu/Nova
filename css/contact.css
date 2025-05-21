@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.brand img {
+    position: absolute;
+    opacity: 70%;
+    left: 8px;
+    top: 0px;
+    height: 110px;
+    width: 110px;
+    background: no-repeat;
+    text-indent: -999em;
+    text-decoration: none;
+    display: flex;
+    
+}
